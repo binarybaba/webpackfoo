@@ -1,3 +1,2 @@
-(function(window){
-    log("wassap");
-})(window)
+require('./index')
+log("wassap");
