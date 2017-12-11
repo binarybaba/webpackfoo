@@ -6,7 +6,7 @@ module.exports = function(env){
         output:{
             path: resolve('dist'),
             filename:'bundle.js',
-            pathinfo: !!env.prod
+            pathinfo: !env.prod
         },
         devtool:env.prod ? 'source-map' : 'eval',
     }
