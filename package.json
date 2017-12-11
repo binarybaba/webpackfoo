@@ -4,7 +4,8 @@
   "description": "dummy project to implement webpack",
   "main": "index.js",
   "scripts": {
-    "build":"webpack -p",
+    "build:dev":"webpack -p --env.dev",
+    "build:prod":"webpack -p --env.prod",
     "start":"http-server --silent",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
