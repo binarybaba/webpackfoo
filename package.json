@@ -1,0 +1,29 @@
+{
+  "name": "webpackfoo",
+  "version": "1.0.0",
+  "description": "dummy project to implement webpack",
+  "main": "index.js",
+  "scripts": {
+    "build":"webpack -p",
+    "start":"http-server --silent",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binarybaba/webpackfoo.git"
+  },
+  "keywords": [
+    "webpack",
+    "dummy"
+  ],
+  "author": "Amin Mohamed Ajani (@AminSpeaks)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binarybaba/webpackfoo/issues"
+  },
+  "homepage": "https://github.com/binarybaba/webpackfoo#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "webpack": "^3.10.0"
+  }
+}
