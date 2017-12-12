@@ -4,4 +4,4 @@ node_modules
 .idea/modules.xml
 .idea/webpackfoo.iml
 .idea/workspace.xml
-
+package-lock.json

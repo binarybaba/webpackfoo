@@ -1,0 +1,93 @@
+/* LESS docs: http://lesscss.org/#-variables */
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header {
+  color: @light-blue; /* compiles to #6c94be */
+  margin: 2em;
+}
+div.user{
+  background:url('http://placehold.it/100x100');
+  width:100px;
+  height:100px;
+  background-repeat: no-repeat;
+
+}
+h1:before {
+  @fnord: "I am fnord. ";
+  @var: 'fnord'; /* It is also possible to define variables with a variable name. */
+  content: @@var; /* compiles to content: "I am fnord."; */
+  color: purple;
+}
+
+
+/* STOP HERE. The rest of this CSS is for style purposes only and is not needed for the demo to function.
+              (but be sure to substitue out the LESS variables and mixins I used above)
+   ---------------------------------------------------------------------------------------------------- */
+
+/* =VARIABLES (LESS @variables do not get compiled into the final CSS file)
+   ---------------------------------------------------------------------------------------------------- */
+@base-background:      #fffaef; /*cream*/
+@base-text:            #4f4351; /*purple/grey*/
+
+@color-subtitles:      #9a8864; /*mud*/
+@color-highlight:      #e9e59b; /*lime*/
+
+@color-button:         #f2f2f0; /*grey*/
+@color-button-text:    darken(@color-button, 20%); /*grey*/
+@color-button-border:  darken(@color-button, 10%); /*grey*/
+@color-button-on:      #ffa640; /*orange*/
+
+
+/* =MIXINS
+   ---------------------------------------------------------------------------------------------------- */
+// Border Radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+
+/* =BASE STYLES
+   ---------------------------------------------------------------------------------------------------- */
+body {
+  background: @base-background;
+  color: @base-text;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2em;
+}
+
+h1, h2 { color: #4f4351; }
+h3, h4, h5 { color: #4f4351; }
+
+small, hr {
+  border-top: 1px solid fade(@light-blue, 20%);
+  color: fade(@light-blue, 50%);
+  display: block;
+  margin: 1em 0;
+  padding: 1em 0;
+  .opacity(50);
+  a {
+    &:link, &:visited {
+      color: fade(@light-blue, 75%);
+    }
+
+    &:hover, &:focus, &:active {
+      color: fade(@light-blue, 90%);
+    }
+  }
+}

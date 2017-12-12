@@ -8,6 +8,11 @@ module.exports = function(env){
             filename:'bundle.js',
             pathinfo: !env.prod
         },
+        module:{
+            loaders:[
+                {test:/\.less$/, loaders:['style-loader', 'css-loader', 'less-loader']}
+            ]
+        },
         devtool:env.prod ? 'source-map' : 'eval',
     }
 }
