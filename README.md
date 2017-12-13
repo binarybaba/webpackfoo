@@ -55,3 +55,11 @@ This is just a dummy project to experiment with webpack and its loaders.
      }
  }
  ```
+ 
+ - A Separate CSS file
+ 
+ using `extract-text-webpack-plugin` we can easily tell webpack to transpile the LESS file into css and then have 
+ it stored in a separate CSS file.
+ The config now becomes:
+ 
+ 
